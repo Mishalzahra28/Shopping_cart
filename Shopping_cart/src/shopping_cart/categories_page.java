@@ -67,7 +67,7 @@ public class categories_page extends javax.swing.JFrame {
         jLabel1.setText("Categories");
 
         product1.setText("Product1");
-        ImageIcon icon =new ImageIcon("laundry.jpg");
+        ImageIcon icon =new ImageIcon("./images/laundry.jpg");
         Image img=icon.getImage();
         Image imageScale=img.getScaledInstance(186,126,Image.SCALE_SMOOTH);
         ImageIcon scaledIcon =new ImageIcon(imageScale);
@@ -76,7 +76,7 @@ public class categories_page extends javax.swing.JFrame {
         //getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));
 
         product2.setText("Product2");
-        ImageIcon icon2 =new ImageIcon("nashta.jpg");
+        ImageIcon icon2 =new ImageIcon("./images/nashta.jpg");
         Image img2=icon2.getImage();
         Image imageScale2=img2.getScaledInstance(186,126,Image.SCALE_SMOOTH);
         ImageIcon scaledIcon2 =new ImageIcon(imageScale2);
@@ -85,7 +85,7 @@ public class categories_page extends javax.swing.JFrame {
         //getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));
 
         product3.setText("Product3");
-        ImageIcon icon3 =new ImageIcon("kitchen.jpg");
+        ImageIcon icon3 =new ImageIcon("./images/kitchen.jpg");
         Image img3=icon3.getImage();
         Image imageScale3=img3.getScaledInstance(186,126,Image.SCALE_SMOOTH);
         ImageIcon scaledIcon3 =new ImageIcon(imageScale3);
@@ -94,7 +94,7 @@ public class categories_page extends javax.swing.JFrame {
         //getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));
 
         product4.setText("Product4");
-        ImageIcon icon4 =new ImageIcon("icecream.jpg");
+        ImageIcon icon4 =new ImageIcon("./images/icecream.jpg");
         Image img4=icon4.getImage();
         Image imageScale4=img4.getScaledInstance(186,126,Image.SCALE_SMOOTH);
         ImageIcon scaledIcon4 =new ImageIcon(imageScale4);

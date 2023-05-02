@@ -165,7 +165,7 @@
             <Property name="text" type="java.lang.String" value="Product1"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon =new ImageIcon(&quot;laundry.jpg&quot;);&#xd;&#xa;Image img=icon.getImage();&#xd;&#xa;Image imageScale=img.getScaledInstance(186,126,Image.SCALE_SMOOTH);&#xd;&#xa;ImageIcon scaledIcon =new ImageIcon(imageScale);&#xd;&#xa;product1.setIcon(scaledIcon);&#xd;&#xa;&#xd;&#xa;//getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon =new ImageIcon(&quot;./images/laundry.jpg&quot;);&#xd;&#xa;Image img=icon.getImage();&#xd;&#xa;Image imageScale=img.getScaledInstance(186,126,Image.SCALE_SMOOTH);&#xd;&#xa;ImageIcon scaledIcon =new ImageIcon(imageScale);&#xd;&#xa;product1.setIcon(scaledIcon);&#xd;&#xa;&#xd;&#xa;//getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="product2">
@@ -173,7 +173,7 @@
             <Property name="text" type="java.lang.String" value="Product2"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon2 =new ImageIcon(&quot;nashta.jpg&quot;);&#xd;&#xa;Image img2=icon2.getImage();&#xd;&#xa;Image imageScale2=img2.getScaledInstance(186,126,Image.SCALE_SMOOTH);&#xd;&#xa;ImageIcon scaledIcon2 =new ImageIcon(imageScale2);&#xd;&#xa;product2.setIcon(scaledIcon2);&#xd;&#xa;&#xd;&#xa;//getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon2 =new ImageIcon(&quot;./images/nashta.jpg&quot;);&#xd;&#xa;Image img2=icon2.getImage();&#xd;&#xa;Image imageScale2=img2.getScaledInstance(186,126,Image.SCALE_SMOOTH);&#xd;&#xa;ImageIcon scaledIcon2 =new ImageIcon(imageScale2);&#xd;&#xa;product2.setIcon(scaledIcon2);&#xd;&#xa;&#xd;&#xa;//getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="product3">
@@ -181,7 +181,7 @@
             <Property name="text" type="java.lang.String" value="Product3"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon3 =new ImageIcon(&quot;kitchen.jpg&quot;);&#xd;&#xa;Image img3=icon3.getImage();&#xd;&#xa;Image imageScale3=img3.getScaledInstance(186,126,Image.SCALE_SMOOTH);&#xd;&#xa;ImageIcon scaledIcon3 =new ImageIcon(imageScale3);&#xd;&#xa;product3.setIcon(scaledIcon3);&#xd;&#xa;&#xd;&#xa;//getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon3 =new ImageIcon(&quot;./images/kitchen.jpg&quot;);&#xd;&#xa;Image img3=icon3.getImage();&#xd;&#xa;Image imageScale3=img3.getScaledInstance(186,126,Image.SCALE_SMOOTH);&#xd;&#xa;ImageIcon scaledIcon3 =new ImageIcon(imageScale3);&#xd;&#xa;product3.setIcon(scaledIcon3);&#xd;&#xa;&#xd;&#xa;//getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="product4">
@@ -189,7 +189,7 @@
             <Property name="text" type="java.lang.String" value="Product4"/>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon4 =new ImageIcon(&quot;icecream.jpg&quot;);&#xd;&#xa;Image img4=icon4.getImage();&#xd;&#xa;Image imageScale4=img4.getScaledInstance(186,126,Image.SCALE_SMOOTH);&#xd;&#xa;ImageIcon scaledIcon4 =new ImageIcon(imageScale4);&#xd;&#xa;product4.setIcon(scaledIcon4);&#xd;&#xa;&#xd;&#xa;//getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));&#xd;&#xa;"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon4 =new ImageIcon(&quot;./images/icecream.jpg&quot;);&#xd;&#xa;Image img4=icon4.getImage();&#xd;&#xa;Image imageScale4=img4.getScaledInstance(186,126,Image.SCALE_SMOOTH);&#xd;&#xa;ImageIcon scaledIcon4 =new ImageIcon(imageScale4);&#xd;&#xa;product4.setIcon(scaledIcon4);&#xd;&#xa;&#xd;&#xa;//getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));&#xd;&#xa;"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="laundryBTN">
