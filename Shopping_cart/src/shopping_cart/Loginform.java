@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 //import org.xml.sax.Attributes;
 
+
 /**
  *
  * @author saman
@@ -171,14 +172,10 @@ public class Loginform extends javax.swing.JFrame {
         userText = Usernametxt.getText();
         pwdText = passwordtxt.getText();
         if (userText.equalsIgnoreCase("Grp13") && pwdText.equalsIgnoreCase("Grp13")) {
-//            try {
-//                this.setVisible(false);
-//                frmdashboard obj3 = new frmdashboard();
-//                obj3.setVisible(true);
-//                obj3.setResizable(false);
-//            } catch (FileNotFoundException ex) {
-//                Logger.getLogger(Loginform.class.getName()).log(Level.SEVERE, null, ex);
-//            }
+            this.setVisible(false);
+            categories_page obj3 = new categories_page();
+            obj3.setVisible(true);
+            obj3.setResizable(false);
 
         } else {
             JOptionPane.showMessageDialog(this, "Invalid Username or Password");
