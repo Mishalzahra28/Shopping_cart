@@ -159,7 +159,11 @@ public class Loginform extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 350, 340));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("restaurant-beach-candles-lights-dinner-hd-720P-wallpaper-middle-size.jpg"));
+        ImageIcon icon =new ImageIcon("./images/metro.png");
+        Image img=icon.getImage();
+        Image imageScale=img.getScaledInstance(870,700,Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon =new ImageIcon(imageScale);
+        jLabel1.setIcon(scaledIcon);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));
 
         pack();
