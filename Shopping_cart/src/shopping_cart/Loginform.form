@@ -209,9 +209,12 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="new javax.swing.ImageIcon(&quot;restaurant-beach-candles-lights-dinner-hd-720P-wallpaper-middle-size.jpg&quot;)" type="code"/>
+          <Connection code="scaledIcon" type="code"/>
         </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ImageIcon icon =new ImageIcon(&quot;./images/metro.png&quot;);&#xa;Image img=icon.getImage();&#xa;Image imageScale=img.getScaledInstance(870,700,Image.SCALE_SMOOTH);&#xa;ImageIcon scaledIcon =new ImageIcon(imageScale);"/>
+      </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="0" y="0" width="870" height="700"/>
