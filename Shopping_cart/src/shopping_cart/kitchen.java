@@ -383,9 +383,10 @@ void addToCart(String id) {
     }
     private void switchCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategoriesActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        categories_page cp = new categories_page() ;
+         categories_page cp = new categories_page() ;
         cp.setVisible(true);
+        this.setVisible(false);
+       
     }//GEN-LAST:event_switchCategoriesActionPerformed
 
     private void addToCart5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCart5ActionPerformed

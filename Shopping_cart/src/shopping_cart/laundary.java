@@ -3,7 +3,8 @@ package shopping_cart;
 
 import shopping_cart.laundary;
 import java.awt.Image;
-import javax.swing.ImageIcon;
+import javax.swing.*;
+//import javax.
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -384,9 +385,11 @@ void addToCart(String id) {
     }
     private void switchCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategoriesActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        categories_page cp = new categories_page() ;
+          categories_page cp = new categories_page() ;
         cp.setVisible(true);
+        this.setVisible(false);
+      
+//        Thread.sleep(2000);
     }//GEN-LAST:event_switchCategoriesActionPerformed
 
     private void addToCart5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCart5ActionPerformed
