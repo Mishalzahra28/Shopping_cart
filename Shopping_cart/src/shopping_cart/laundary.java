@@ -79,7 +79,7 @@ public class laundary extends javax.swing.JFrame {
         addToCart9 = new javax.swing.JButton();
         addToCart10 = new javax.swing.JButton();
         prod10 = new javax.swing.JLabel();
-        switchCategories1 = new javax.swing.JToggleButton();
+        gotoCart = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -226,12 +226,12 @@ public class laundary extends javax.swing.JFrame {
         ImageIcon scaledIcons =new ImageIcon(imageScales);
         prod10.setIcon(scaledIcons);
 
-        switchCategories1.setBackground(new java.awt.Color(204, 204, 204));
-        switchCategories1.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        switchCategories1.setText("Go To Cart");
-        switchCategories1.addActionListener(new java.awt.event.ActionListener() {
+        gotoCart.setBackground(new java.awt.Color(204, 204, 204));
+        gotoCart.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        gotoCart.setText("Go To Cart");
+        gotoCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                switchCategories1ActionPerformed(evt);
+                gotoCartActionPerformed(evt);
             }
         });
 
@@ -284,7 +284,7 @@ public class laundary extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(switchCategories, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(switchCategories1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(gotoCart, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -351,7 +351,7 @@ public class laundary extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(switchCategories)
-                    .addComponent(switchCategories1))
+                    .addComponent(gotoCart))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -413,9 +413,21 @@ addToCart("l01");        // TODO add your handling code here:
        addToCart("l03"); // TODO add your handling code here:
     }//GEN-LAST:event_addToCart10ActionPerformed
 
-    private void switchCategories1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategories1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_switchCategories1ActionPerformed
+    private void gotoCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gotoCartActionPerformed
+  // TODO add your handling code here:
+        String [][] newArr = new String[6][4];
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (Integer.parseInt(arr1[i][2])!=0) {
+                    newArr[i][j] = arr1[i][j];
+                }
+            }
+        }
+        Cart sendArr =  new Cart(arr1);
+        Cart c =  new Cart();
+        this.setVisible(false);
+        c.setVisible(true);       
+    }//GEN-LAST:event_gotoCartActionPerformed
 
     /**
      * @param args the command line arguments
@@ -468,6 +480,7 @@ addToCart("l01");        // TODO add your handling code here:
     private javax.swing.JButton addToCart7;
     private javax.swing.JButton addToCart8;
     private javax.swing.JButton addToCart9;
+    private javax.swing.JToggleButton gotoCart;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -484,6 +497,5 @@ addToCart("l01");        // TODO add your handling code here:
     private javax.swing.JLabel prod8;
     private javax.swing.JLabel prod9;
     private javax.swing.JToggleButton switchCategories;
-    private javax.swing.JToggleButton switchCategories1;
     // End of variables declaration//GEN-END:variables
 }

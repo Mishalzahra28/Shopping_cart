@@ -6,6 +6,7 @@ package shopping_cart;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import java.awt.Image;
+import javax.swing.RowFilter;
 
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
@@ -37,6 +38,14 @@ public class Cart extends javax.swing.JFrame {
         setTotal();
     }
     
+    public Cart(String [][]array1){
+         for (int i = 0; i < 6; i++) {
+             for (int j = 0; j < 4; j++) {
+                 System.out.println(array1[i][j]);
+             }
+        }
+     }
+    
     public void setTotal(){
         int sum=0;
                    for (int i = 0; i < cart_items.getRowCount(); i++) {
@@ -64,6 +73,8 @@ public class Cart extends javax.swing.JFrame {
         total_amount = new javax.swing.JLabel();
         deleteBTN = new javax.swing.JToggleButton();
         checkoutBTN = new javax.swing.JButton();
+        searchBar = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,6 +141,16 @@ public class Cart extends javax.swing.JFrame {
             }
         });
 
+        searchBar.setSelectionColor(new java.awt.Color(204, 204, 204));
+        searchBar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                searchBarKeyReleased(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        jLabel1.setText("Search:");
+
         javax.swing.GroupLayout cart_panelLayout = new javax.swing.GroupLayout(cart_panel);
         cart_panel.setLayout(cart_panelLayout);
         cart_panelLayout.setHorizontalGroup(
@@ -137,33 +158,44 @@ public class Cart extends javax.swing.JFrame {
             .addComponent(cart_header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cart_panelLayout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(checkoutBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(cart_panelLayout.createSequentialGroup()
-                        .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(checkoutBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(cart_panelLayout.createSequentialGroup()
-                                .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(total_amountLBL)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(total_amount, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(177, 177, 177)
+                        .addComponent(total_amountLBL)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(total_amount, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cart_panelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cart_panelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(127, 127, 127))
         );
         cart_panelLayout.setVerticalGroup(
             cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cart_panelLayout.createSequentialGroup()
                 .addComponent(cart_header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addGap(28, 28, 28)
+                .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(total_amount, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(total_amountLBL, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61)
+                .addGap(27, 27, 27)
                 .addComponent(checkoutBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addGap(83, 83, 83))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -198,6 +230,12 @@ public class Cart extends javax.swing.JFrame {
         c1.setResizable(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_checkoutBTNActionPerformed
+
+    private void searchBarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchBarKeyReleased
+        TableRowSorter<DefaultTableModel> t4 = new TableRowSorter<>(model);
+        cart_items.setRowSorter(t4);
+        t4.setRowFilter(RowFilter.regexFilter("(?i)" + searchBar.getText().trim()));    // TODO add your handling code here:
+    }//GEN-LAST:event_searchBarKeyReleased
 
     /**
      * @param args the command line arguments
@@ -241,7 +279,9 @@ public class Cart extends javax.swing.JFrame {
     private javax.swing.JPanel cart_panel;
     private javax.swing.JButton checkoutBTN;
     private javax.swing.JToggleButton deleteBTN;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField searchBar;
     private javax.swing.JLabel total_amount;
     private javax.swing.JLabel total_amountLBL;
     // End of variables declaration//GEN-END:variables

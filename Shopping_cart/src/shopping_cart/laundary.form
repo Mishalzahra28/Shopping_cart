@@ -154,7 +154,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="switchCategories" min="-2" pref="216" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="switchCategories1" min="-2" pref="146" max="-2" attributes="0"/>
+                                  <Component id="gotoCart" min="-2" pref="146" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -247,7 +247,7 @@
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="switchCategories" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="switchCategories1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="gotoCart" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="47" max="32767" attributes="0"/>
               </Group>
@@ -431,7 +431,7 @@
             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icons =new ImageIcon(&quot;./images/laundary_5.jpg&quot;);                &#xa;Image imgs=icons.getImage();                &#xa;Image imageScales=imgs.getScaledInstance(97,89,Image.SCALE_SMOOTH);                &#xa;ImageIcon scaledIcons =new ImageIcon(imageScales);       &#xa;prod10.setIcon(scaledIcons);"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JToggleButton" name="switchCategories1">
+        <Component class="javax.swing.JToggleButton" name="gotoCart">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -442,7 +442,7 @@
             <Property name="text" type="java.lang.String" value="Go To Cart"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="switchCategories1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gotoCartActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

@@ -19,8 +19,34 @@ public class kitchen extends javax.swing.JFrame {
     /**
      * Creates new form productsPage
      */
+    String [][] arr1 = new String[6][4];
     public kitchen() {
         initComponents();
+        arr1[0][0] = "k01";
+        arr1[0][1] = "Tea Set";
+        arr1[0][2] = "0";
+        arr1[0][3] = "500";
+        arr1[1][0] = "k02";
+        arr1[1][1] = "Plates";
+        arr1[1][2] = "0";
+        arr1[1][3] = "500";
+        arr1[2][0] = "k03";
+        arr1[2][1] = "Glass";
+        arr1[2][2] = "0";
+        arr1[2][3] = "fds";
+        arr1[3][0] = "k04";
+        arr1[3][1] = "Cooking Pot";
+        arr1[3][2] = "0";
+        arr1[3][3] = "500";
+        arr1[4][0] = "k05";
+        arr1[4][1] = "Bowl";
+        arr1[4][2] = "0";
+        arr1[4][3] = "500";
+        arr1[5][0] = "k06";
+        arr1[5][1] = "Blender";
+        arr1[5][2] = "0";
+        arr1[5][3] = "500";
+
     }
 
     /**
@@ -54,7 +80,7 @@ public class kitchen extends javax.swing.JFrame {
         addToCart9 = new javax.swing.JButton();
         addToCart10 = new javax.swing.JButton();
         prod10 = new javax.swing.JLabel();
-        switchCategories1 = new javax.swing.JToggleButton();
+        gotoCart = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -201,12 +227,12 @@ public class kitchen extends javax.swing.JFrame {
         ImageIcon scaledIcons =new ImageIcon(imageScales);
         prod10.setIcon(scaledIcons);
 
-        switchCategories1.setBackground(new java.awt.Color(204, 204, 204));
-        switchCategories1.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        switchCategories1.setText("Go To Cart");
-        switchCategories1.addActionListener(new java.awt.event.ActionListener() {
+        gotoCart.setBackground(new java.awt.Color(204, 204, 204));
+        gotoCart.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
+        gotoCart.setText("Go To Cart");
+        gotoCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                switchCategories1ActionPerformed(evt);
+                gotoCartActionPerformed(evt);
             }
         });
 
@@ -256,7 +282,7 @@ public class kitchen extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(switchCategories, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(switchCategories1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(gotoCart, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -324,7 +350,7 @@ public class kitchen extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(switchCategories)
-                    .addComponent(switchCategories1))
+                    .addComponent(gotoCart))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -346,7 +372,15 @@ public class kitchen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+void addToCart(String id) {
+        for(int i = 0; i<arr1.length; i++){
+            if(arr1[i][0] == id){
+               int quantity = Integer.parseInt(arr1[i][2]);
+               quantity +=1;
+               arr1[i][2] =  Integer.toString(quantity);
+            }
+        }
+    }
     private void switchCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategoriesActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
@@ -378,9 +412,9 @@ public class kitchen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addToCart10ActionPerformed
 
-    private void switchCategories1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategories1ActionPerformed
+    private void gotoCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gotoCartActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_switchCategories1ActionPerformed
+    }//GEN-LAST:event_gotoCartActionPerformed
 
     /**
      * @param args the command line arguments
@@ -433,6 +467,7 @@ public class kitchen extends javax.swing.JFrame {
     private javax.swing.JButton addToCart7;
     private javax.swing.JButton addToCart8;
     private javax.swing.JButton addToCart9;
+    private javax.swing.JToggleButton gotoCart;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -449,6 +484,5 @@ public class kitchen extends javax.swing.JFrame {
     private javax.swing.JLabel prod8;
     private javax.swing.JLabel prod9;
     private javax.swing.JToggleButton switchCategories;
-    private javax.swing.JToggleButton switchCategories1;
     // End of variables declaration//GEN-END:variables
 }

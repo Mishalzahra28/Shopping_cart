@@ -18,9 +18,34 @@ public class nashta extends javax.swing.JFrame {
 
     /**
      * Creates new form productsPage
-     */
+     */    
+    String [][] arr1 = new String[6][4];
     public nashta() {
         initComponents();
+         arr1[0][0] = "n01";
+        arr1[0][1] = "Eggs";
+        arr1[0][2] = "0";
+        arr1[0][3] = "500";
+        arr1[1][0] = "n02";
+        arr1[1][1] = "Bread";
+        arr1[1][2] = "0";
+        arr1[1][3] = "500";
+        arr1[2][0] = "n03";
+        arr1[2][1] = "Strawberry Flakes";
+        arr1[2][2] = "0";
+        arr1[2][3] = "fds";
+        arr1[3][0] = "n04";
+        arr1[3][1] = "Choco Flakes";
+        arr1[3][2] = "0";
+        arr1[3][3] = "500";
+        arr1[4][0] = "n05";
+        arr1[4][1] = "Yogurt";
+        arr1[4][2] = "0";
+        arr1[4][3] = "500";
+        arr1[5][0] = "n06";
+        arr1[5][1] = "Corn Flakes";
+        arr1[5][2] = "0";
+        arr1[5][3] = "500";
     }
 
     /**
@@ -342,7 +367,15 @@ public class nashta extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+void addToCart(String id) {
+        for(int i = 0; i<arr1.length; i++){
+            if(arr1[i][0] == id){
+               int quantity = Integer.parseInt(arr1[i][2]);
+               quantity +=1;
+               arr1[i][2] =  Integer.toString(quantity);
+            }
+        }
+    }
     private void switchCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategoriesActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
