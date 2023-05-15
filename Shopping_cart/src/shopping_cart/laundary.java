@@ -1,6 +1,5 @@
 package shopping_cart;
 
-
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
@@ -8,7 +7,6 @@ import javax.swing.ImageIcon;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author Lenovo
@@ -20,6 +18,36 @@ public class laundary extends javax.swing.JFrame {
      */
     public laundary() {
         initComponents();
+
+        String[][] arr1 = new String[6][4];
+        arr1[0][0] = "l01";
+        arr1[0][1] = "Detergent";
+        arr1[0][2] = "0";
+        arr1[0][3] = "500";
+        arr1[1][0] = "l02";
+        arr1[1][1] = "Brush";
+        arr1[1][2] = "0";
+        arr1[1][3] = "500";
+        arr1[2][0] = "l03";
+        arr1[2][1] = "Glooves";
+        arr1[2][2] = "0";
+        arr1[2][3] = "fds";
+        arr1[3][0] = "l04";
+        arr1[3][1] = "Comforter";
+        arr1[3][2] = "0";
+        arr1[3][3] = "500";
+        arr1[4][0] = "l05";
+        arr1[4][1] = "Dry Stand";
+        arr1[4][2] = "0";
+        arr1[4][3] = "500";
+        arr1[5][0] = "l06";
+        arr1[5][1] = "Clips";
+        arr1[5][2] = "0";
+        arr1[5][3] = "500";
+    }
+
+    void addToCart(String id) {
+        
     }
 
     /**
@@ -425,7 +453,7 @@ public class laundary extends javax.swing.JFrame {
     private void switchCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategoriesActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        categories_page cp = new categories_page() ;
+        categories_page cp = new categories_page();
         cp.setVisible(true);
     }//GEN-LAST:event_switchCategoriesActionPerformed
 
@@ -464,15 +492,11 @@ public class laundary extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
-    
 //ImageIcon icon =new ImageIcon("laundry.jpg");
 //Image img=icon.getImage();
 //Image imageScale=img.getScaledInstance(186,126,Image.SCALE_SMOOTH);
 //ImageIcon scaledIcon =new ImageIcon(imageScale);
 //prod1.setIcon(scaledIcon);
-
-
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
