@@ -16,23 +16,30 @@ import javax.swing.table.TableRowSorter;
  *
  * @author Mishal
  */
-public class Cart extends javax.swing.JFrame {
+public class Cart2 extends javax.swing.JFrame {
  DefaultTableModel model;
  
    
     /**
      * Creates new form Cart
      */
-    public Cart() {
+    public Cart2(String product_name) {
         initComponents();
           this.setLocationRelativeTo(null);
+        model = (DefaultTableModel) cart_items.getModel();
+       model.addColumn("ID");
+        model.addColumn("Product");
+        model.addColumn("Quantity");
+        model.addColumn("Price");
+         model.insertRow(model.getRowCount(), new Object[]{"",product_name, "", ""});
+
 //           model = new DefaultTableModel() cart_items.getModel() ;
-        model = new DefaultTableModel() ;
-         cart_items =new JTable(model);
-       model.addColumn("Column 1");
-        model.addColumn("Column 2");
-        model.addColumn("Column 1");
-        model.addColumn("Column 2");
+//        model = (DefaultTableModel) cart_items.getModel(); ;
+////         cart_items =new JTable(model);
+//       model.addColumn("Column 1");
+//        model.addColumn("Column 2");
+//        model.addColumn("Column 1");
+//        model.addColumn("Column 2");
         this.getContentPane().setBackground(new Color(255, 255, 255));
         DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
         MyHeaderRender.setBackground(new Color(0, 0, 0));
@@ -41,42 +48,43 @@ public class Cart extends javax.swing.JFrame {
 //        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
 //        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
 //        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
-        setTotal();
+//        setTotal();
     }
     
-    public Cart(String [][]array1){
-          model = new DefaultTableModel() ;
-         cart_items =new JTable(model);
-       model.addColumn("ID");
-        model.addColumn("Product");
-        model.addColumn("Quantity");
-        model.addColumn("Price");
-//        f.setSize(600, 400); cart_items.getModel();
-////         model = new DefaultTableModel();
-////            cart_items= new JTable(model) ;
-//        model.addColumn("Column 1");
-//        model.addColumn("Column 2");
-//        model.addColumn("Column 1");
-//        model.addColumn("Column 2");
-// DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
-//        MyHeaderRender.setBackground(new Color(0, 0, 0));
-//        MyHeaderRender.setForeground(new Color(255, 255, 255));
-//        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
-//               
-         for (int i = 0; i < 6; i++) {
-             for (int j = 0; j < 4; j++) {
-                 System.out.println(array1[i][j]);
-//                 model.addRow(array1[i]);
- model.insertRow(model.getRowCount(), new Object[]{array1[i][0], array1[i][1], array1[i][2],array1[i][3]});
-  
-//            cart_items.getModel().
-//                    model.insertRow(cart_items.getRowCount(),array1[i]);
-             }
-        }
-     }
+//    public Cart2(String product_name){
+//          model = new DefaultTableModel() ;
+//         cart_items =new JTable(model);
+//       model.addColumn("ID");
+//        model.addColumn("Product");
+//        model.addColumn("Quantity");
+//        model.addColumn("Price");
+//         model.insertRow(model.getRowCount(), new Object[]{"",product_name, "", ""});
+//
+////        f.setSize(600, 400); cart_items.getModel();
+//////         model = new DefaultTableModel();
+//////            cart_items= new JTable(model) ;
+////        model.addColumn("Column 1");
+////        model.addColumn("Column 2");
+////        model.addColumn("Column 1");
+////        model.addColumn("Column 2");
+//// DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
+////        MyHeaderRender.setBackground(new Color(0, 0, 0));
+////        MyHeaderRender.setForeground(new Color(255, 255, 255));
+////        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
+//////               
+////         for (int i = 0; i < 6; i++) {
+////             for (int j = 0; j < 4; j++) {
+////                 System.out.println(array1[i][j]);
+////                 model.addRow(array1[i]);
+//  
+////            cart_items.getModel().
+////                    model.insertRow(cart_items.getRowCount(),array1[i]);
+////             }
+//}
+////     }
     
     public void setTotal(){
         int sum=0;
@@ -286,20 +294,21 @@ public class Cart extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cart.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cart2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cart.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cart2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cart.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cart2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cart.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Cart2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cart().setVisible(true);
+                new Cart2().setVisible(true);
             }
         });
     }

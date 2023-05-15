@@ -16,41 +16,21 @@ import javax.swing.table.TableRowSorter;
  *
  * @author Mishal
  */
-public class Cart extends javax.swing.JFrame {
+public class Cart_1 extends javax.swing.JFrame {
  DefaultTableModel model;
- 
-   
-    /**
-     * Creates new form Cart
-     */
-    public Cart() {
-        initComponents();
-          this.setLocationRelativeTo(null);
-//           model = new DefaultTableModel() cart_items.getModel() ;
-        model = new DefaultTableModel() ;
-         cart_items =new JTable(model);
-       model.addColumn("Column 1");
-        model.addColumn("Column 2");
-        model.addColumn("Column 1");
-        model.addColumn("Column 2");
-        this.getContentPane().setBackground(new Color(255, 255, 255));
-        DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
-        MyHeaderRender.setBackground(new Color(0, 0, 0));
-        MyHeaderRender.setForeground(new Color(255, 255, 255));
-//        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
-        setTotal();
-    }
-    
-    public Cart(String [][]array1){
-          model = new DefaultTableModel() ;
+ JTable cart_items;
+  public void addToCart(String [][]array1){
+               model = new DefaultTableModel() ;
          cart_items =new JTable(model);
        model.addColumn("ID");
         model.addColumn("Product");
         model.addColumn("Quantity");
         model.addColumn("Price");
+//         tblPanel.add(new JScrollPane(cart_items));
+        JFrame frame = new JFrame();
+      frame.setSize(600, 400);
+      frame.add(new JScrollPane(cart_items));
+      frame.setVisible(true);
 //        f.setSize(600, 400); cart_items.getModel();
 ////         model = new DefaultTableModel();
 ////            cart_items= new JTable(model) ;
@@ -66,17 +46,81 @@ public class Cart extends javax.swing.JFrame {
 //        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
 //        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
 //               
-         for (int i = 0; i < 6; i++) {
-             for (int j = 0; j < 4; j++) {
-                 System.out.println(array1[i][j]);
+         for (int i = 0; i < array1.length; i++) {
+//             for (int j = 0; j < 4; j++) {
+//                 System.out.println(array1[i][j]);
 //                 model.addRow(array1[i]);
  model.insertRow(model.getRowCount(), new Object[]{array1[i][0], array1[i][1], array1[i][2],array1[i][3]});
   
 //            cart_items.getModel().
 //                    model.insertRow(cart_items.getRowCount(),array1[i]);
-             }
+//             }
+        }
+    }
+    /**
+     * Creates new form Cart
+     */
+    public Cart_1() {
+        initComponents();
+          this.setLocationRelativeTo(null);
+//           model = new DefaultTableModel() cart_items.getModel() ;
+//        model = new DefaultTableModel() ;
+//         cart_items =new JTable(model);
+//       model.addColumn("Column 1");
+//        model.addColumn("Column 2");
+//        model.addColumn("Column 1");
+//        model.addColumn("Column 2");
+        this.getContentPane().setBackground(new Color(255, 255, 255));
+        DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
+        MyHeaderRender.setBackground(new Color(0, 0, 0));
+        MyHeaderRender.setForeground(new Color(255, 255, 255));
+//        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
+//        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
+//        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
+//        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
+        setTotal();
+    }
+    
+    public Cart_1(String [][]array1){
+          model = new DefaultTableModel() ;
+         cart_items =new JTable(model);
+       model.addColumn("ID");
+        model.addColumn("Product");
+        model.addColumn("Quantity");
+        model.addColumn("Price");
+//         tblPanel.add(new JScrollPane(cart_items));
+        JFrame frame = new JFrame();
+      frame.setSize(600, 400);
+      frame.add(new JScrollPane(cart_items));
+      frame.setVisible(true);
+//        f.setSize(600, 400); cart_items.getModel();
+////         model = new DefaultTableModel();
+////            cart_items= new JTable(model) ;
+//        model.addColumn("Column 1");
+//        model.addColumn("Column 2");
+//        model.addColumn("Column 1");
+//        model.addColumn("Column 2");
+// DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
+//        MyHeaderRender.setBackground(new Color(0, 0, 0));
+//        MyHeaderRender.setForeground(new Color(255, 255, 255));
+//        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
+//        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
+//        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
+//        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
+//               
+         for (int i = 0; i < array1.length; i++) {
+//             for (int j = 0; j < 4; j++) {
+//                 System.out.println(array1[i][j]);
+//                 model.addRow(array1[i]);
+ model.insertRow(model.getRowCount(), new Object[]{array1[i][0], array1[i][1], array1[i][2],array1[i][3]});
+  
+//            cart_items.getModel().
+//                    model.insertRow(cart_items.getRowCount(),array1[i]);
+//             }
         }
      }
+    
+    
     
     public void setTotal(){
         int sum=0;
@@ -99,14 +143,13 @@ public class Cart extends javax.swing.JFrame {
         cart_panel = new javax.swing.JPanel();
         cart_header = new javax.swing.JPanel();
         cart = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        cart_items = new javax.swing.JTable();
         total_amountLBL = new javax.swing.JLabel();
         total_amount = new javax.swing.JLabel();
         deleteBTN = new javax.swing.JToggleButton();
         checkoutBTN = new javax.swing.JButton();
         searchBar = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        tblPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -129,19 +172,6 @@ public class Cart extends javax.swing.JFrame {
             cart_headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(cart, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
         );
-
-        cart_items.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {20, "shampoo", 2,2000},
-                {56, "tea", 4,20},
-                {300, "sugar", 1,20},
-                {1000, "sugar", 1,200}
-            },
-            new String [] {
-                "id","Product", "Quantity", "Price"
-            }
-        ));
-        jScrollPane1.setViewportView(cart_items);
 
         total_amountLBL.setFont(new java.awt.Font("Sitka Display", 0, 14)); // NOI18N
         total_amountLBL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -183,6 +213,17 @@ public class Cart extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
         jLabel1.setText("Search:");
 
+        javax.swing.GroupLayout tblPanelLayout = new javax.swing.GroupLayout(tblPanel);
+        tblPanel.setLayout(tblPanelLayout);
+        tblPanelLayout.setHorizontalGroup(
+            tblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 373, Short.MAX_VALUE)
+        );
+        tblPanelLayout.setVerticalGroup(
+            tblPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 197, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout cart_panelLayout = new javax.swing.GroupLayout(cart_panel);
         cart_panel.setLayout(cart_panelLayout);
         cart_panelLayout.setHorizontalGroup(
@@ -190,25 +231,26 @@ public class Cart extends javax.swing.JFrame {
             .addComponent(cart_header, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cart_panelLayout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(checkoutBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(cart_panelLayout.createSequentialGroup()
-                        .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(177, 177, 177)
-                        .addComponent(total_amountLBL)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(total_amount, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cart_panelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cart_panelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(127, 127, 127))
+                .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cart_panelLayout.createSequentialGroup()
+                        .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(checkoutBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(cart_panelLayout.createSequentialGroup()
+                                .addComponent(deleteBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(177, 177, 177)
+                                .addComponent(total_amountLBL)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(total_amount, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cart_panelLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(127, 127, 127))))
+            .addGroup(cart_panelLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(tblPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         cart_panelLayout.setVerticalGroup(
             cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,8 +260,8 @@ public class Cart extends javax.swing.JFrame {
                 .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(searchBar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(tblPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(cart_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(total_amount, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -307,13 +349,12 @@ public class Cart extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel cart;
     private javax.swing.JPanel cart_header;
-    private javax.swing.JTable cart_items;
     private javax.swing.JPanel cart_panel;
     private javax.swing.JButton checkoutBTN;
     private javax.swing.JToggleButton deleteBTN;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField searchBar;
+    private javax.swing.JPanel tblPanel;
     private javax.swing.JLabel total_amount;
     private javax.swing.JLabel total_amountLBL;
     // End of variables declaration//GEN-END:variables

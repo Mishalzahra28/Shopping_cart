@@ -1,7 +1,7 @@
 package shopping_cart;
 
 
-import shopping_cart.laundary;
+import shopping_cart.laundary1;
 import java.awt.Image;
 import javax.swing.*;
 //import javax.
@@ -15,14 +15,14 @@ import javax.swing.*;
  *
  * @author Lenovo
  */
-public class laundary extends javax.swing.JFrame {
+public class laundary1 extends javax.swing.JFrame {
 
     /**
      * Creates new form productsPage
      */
-    String[][] arr1 = new String[6][4];
-    public laundary() {
-        initComponents();
+//    String[][] arr1 = new String[6][4];
+//    public laundary1() {
+//        initComponents();
 //        arr1[0][0] = "l01";
 //        arr1[0][1] = "Detergent";
 //        arr1[0][2] = "0";
@@ -47,7 +47,7 @@ public class laundary extends javax.swing.JFrame {
 //        arr1[5][1] = "Clips";
 //        arr1[5][2] = "0";
 //        arr1[5][3] = "500";
-    }
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -374,7 +374,7 @@ public class laundary extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-void addToCart(String id) {
+//void addToCart(String id) {
 //        for(int i = 0; i<arr1.length; i++){
 //            if(arr1[i][0] == id){
 //               int quantity = Integer.parseInt(arr1[i][2]);
@@ -383,7 +383,7 @@ void addToCart(String id) {
 //            }
 //            System.out.println(arr1[i][2]);
 //        }
-    }
+//    }
     private void switchCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategoriesActionPerformed
         // TODO add your handling code here:
           categories_page cp = new categories_page() ;
@@ -394,34 +394,31 @@ void addToCart(String id) {
     }//GEN-LAST:event_switchCategoriesActionPerformed
 
     private void addToCart5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCart5ActionPerformed
- if(evt.getSource() == addToCart5){
+//       addToCart("l04"); // TODO add your handling code here:
+    if(evt.getSource() == addToCart5){
         String name_lbl = price4.getText().toString();
-        System.out.println(name_lbl);
         Cart2 c1 = new Cart2(name_lbl);
-        this.setVisible(false);
-        c1.setVisible(true); 
     }
-// addToCart("l04"); // TODO add your handling code here:
     }//GEN-LAST:event_addToCart5ActionPerformed
 
     private void addToCart6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCart6ActionPerformed
-      addToCart("l05");  // TODO add your handling code here:
+//      addToCart("l05");  // TODO add your handling code here:
     }//GEN-LAST:event_addToCart6ActionPerformed
 
     private void addToCart7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCart7ActionPerformed
-       addToCart("l06"); // TODO add your handling code here:
+//       addToCart("l06"); // TODO add your handling code here:
     }//GEN-LAST:event_addToCart7ActionPerformed
 
     private void addToCart8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCart8ActionPerformed
-addToCart("l01");        // TODO add your handling code here:
+//addToCart("l01");        // TODO add your handling code here:
     }//GEN-LAST:event_addToCart8ActionPerformed
 
     private void addToCart9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCart9ActionPerformed
-    addToCart("l02");    // TODO add your handling code here:
+//    addToCart("l02");    // TODO add your handling code here:
     }//GEN-LAST:event_addToCart9ActionPerformed
 
     private void addToCart10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCart10ActionPerformed
-       addToCart("l03"); // TODO add your handling code here:
+//       addToCart("l03"); // TODO add your handling code here:
     }//GEN-LAST:event_addToCart10ActionPerformed
 
     private void gotoCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gotoCartActionPerformed
@@ -436,7 +433,7 @@ addToCart("l01");        // TODO add your handling code here:
 //        }
 //        Cart_1 sendArr =  new Cart_1(newArr);
         
-        Cart_1 c =  new Cart_1();
+        Cart2 c =  new Cart2();
         this.setVisible(false);
         c.setVisible(true);       
     }//GEN-LAST:event_gotoCartActionPerformed
@@ -467,20 +464,21 @@ addToCart("l01");        // TODO add your handling code here:
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(laundary.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(laundary1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(laundary.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(laundary1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(laundary.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(laundary1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(laundary.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(laundary1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new laundary().setVisible(true);
+                new laundary1().setVisible(true);
             }
         });
     }
