@@ -216,18 +216,30 @@ public class categories_page extends javax.swing.JFrame {
 
     private void laundryBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryBTNActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        laundary l = new laundary();
+        l.setVisible(true);
     }//GEN-LAST:event_laundryBTNActionPerformed
 
     private void nashtaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nashtaBTNActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        nashta n = new nashta();
+        n.setVisible(true);
     }//GEN-LAST:event_nashtaBTNActionPerformed
 
     private void kitchenBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kitchenBTNActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        kitchen k = new kitchen();
+        k.setVisible(true);
     }//GEN-LAST:event_kitchenBTNActionPerformed
 
     private void icecreamBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_icecreamBTNActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        icecream i = new icecream();
+        i.setVisible(true);
     }//GEN-LAST:event_icecreamBTNActionPerformed
 
     /**
