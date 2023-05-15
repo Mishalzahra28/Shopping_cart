@@ -422,6 +422,8 @@ public class kitchen extends javax.swing.JFrame {
 
     private void addToCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartActionPerformed
         // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_addToCartActionPerformed
 
     private void switchCategoriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_switchCategoriesActionPerformed

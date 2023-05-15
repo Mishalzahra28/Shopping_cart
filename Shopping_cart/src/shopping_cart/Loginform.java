@@ -5,25 +5,23 @@
  */
 package shopping_cart;
 
-//import RMS.frmdashboard;
+
 import javax.swing.JOptionPane;
 import java.awt.*;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-//import org.xml.sax.Attributes;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-
-/**
- *
- * @author saman
- */
 public class Loginform extends javax.swing.JFrame {
 
-
     /**
-     * Creates new form Loginform
+      * Creates new form Loginform
      */
     public Loginform() {
         initComponents();
@@ -31,6 +29,11 @@ public class Loginform extends javax.swing.JFrame {
         passwordtxt.setBackground(null);
         this.setLocationRelativeTo(null);
 
+    }
+    public int UserId;
+
+    public int getUserId() {
+        return UserId;
     }
 
     /**
@@ -171,23 +174,47 @@ public class Loginform extends javax.swing.JFrame {
 
     private void loginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbtnActionPerformed
         // TODO add your handling code here:
+        String url = "jdbc:mysql://localhost:3306/supermarket";
+        String username = "root"; 
+        String password = ""; 
+
         String userText;
         String pwdText;
         userText = Usernametxt.getText();
-        pwdText = passwordtxt.getText();
-        if (userText.equalsIgnoreCase("Grp13") && pwdText.equalsIgnoreCase("Grp13")) {
-            this.setVisible(false);
-            categories_page obj3 = new categories_page();
-            obj3.setVisible(true);
-            obj3.setResizable(false);
+        String passwordText = new String(passwordtxt.getPassword());
+        boolean loginStatus = false;
 
-        } else {
-            JOptionPane.showMessageDialog(this, "Invalid Username or Password");
-            Usernametxt.setText("");
-            passwordtxt.setText("");
-            passwordchk.setSelected(false);
-            passwordtxt.setEchoChar('*');
-            Usernametxt.requestFocus();
+        try {
+            Connection conn = DriverManager.getConnection(url, username, password);
+            String query = "SELECT * FROM user_table WHERE user_name = ? AND user_password = ?";
+            String query2 = "SELECT user_id FROM user_table WHERE user_name = ?";
+            PreparedStatement statement = conn.prepareStatement(query);
+            statement.setString(1, userText);
+            statement.setString(2, passwordText);
+            ResultSet result = statement.executeQuery();
+
+            if (result.next()) {
+
+                loginStatus = true;
+                PreparedStatement statement2 = conn.prepareStatement(query2);
+                ResultSet resultSet = statement.executeQuery();
+                if (resultSet.next()) {
+                    UserId = resultSet.getInt("user_id");
+                    System.out.println("Retrieved integer value: " + UserId);
+                }
+
+            } else {
+                loginStatus = false;
+            }
+
+            if (loginStatus) {
+
+                categories_page page = new categories_page();
+                page.setVisible(true);
+                dispose();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }//GEN-LAST:event_loginbtnActionPerformed
 

@@ -3,9 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package shopping_cart;
+
 import javax.swing.ImageIcon;
 import java.awt.Image;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Mishal
@@ -181,28 +189,64 @@ public class checkout extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void checkoutBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutBTNActionPerformed
-     ImageIcon icon =new ImageIcon("./images/checked.png");
-Image img=icon.getImage();
-Image imageScale=img.getScaledInstance(50,50,Image.SCALE_SMOOTH);
-ImageIcon scaledIcon =new ImageIcon(imageScale);
-     JOptionPane.showMessageDialog(this, "Yor order is placed!","Inane custom dialog",
-    JOptionPane.INFORMATION_MESSAGE,
-    scaledIcon);
+
+        String url = "jdbc:mysql://localhost:3306/supermarket";
+        String username = "root"; // Change if your MySQL username is different
+        String password = "";
+
+        try {
+            Connection conn = DriverManager.getConnection(url, username, password);
+
+            DefaultTableModel model = (DefaultTableModel) checkoutTBL.getModel();
+            int rowCount = model.getRowCount();
+
+            String query = "INSERT INTO sales (fkcart_id, product, quantity, price,id) VALUES (?, ?, ?, ?,?)";
+
+             PreparedStatement statement = conn.prepareStatement(query);
+
+            for (int i = 0; i < rowCount; i++) {
+                int id = (int) model.getValueAt(i, 0);
+                String product = (String) model.getValueAt(i, 1);
+                int quantity = (int) model.getValueAt(i, 2);
+                int price = (int) model.getValueAt(i, 3);
+
+                statement.setInt(1, 4);
+
+                statement.setInt(5, id);
+                statement.setString(2, product);
+                statement.setInt(3, quantity);
+                statement.setDouble(4, price);
+
+                statement.executeUpdate();
+            }
+
+            System.out.println("Data added to the database successfully.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        ImageIcon icon = new ImageIcon("./images/checked.png");
+        Image img = icon.getImage();
+        Image imageScale = img.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(imageScale);
+        JOptionPane.showMessageDialog(this, "Yor order is placed!", "Inane custom dialog",
+                JOptionPane.INFORMATION_MESSAGE,
+                scaledIcon);
     }//GEN-LAST:event_checkoutBTNActionPerformed
 
     /**
      * @param args the command line arguments
      */
-       public void setTotal(){
-        int sum=0;
-                   for (int i = 0; i < checkoutTBL.getRowCount(); i++) {
-                      int val=(int)checkoutTBL.getModel().getValueAt(i, 3); 
-                      sum=sum+val;
-                      
-                }
-                   total_amount.setText(String.valueOf(sum));
+    public void setTotal() {
+        int sum = 0;
+        for (int i = 0; i < checkoutTBL.getRowCount(); i++) {
+            int val = (int) checkoutTBL.getModel().getValueAt(i, 3);
+            sum = sum + val;
+
+        }
+        total_amount.setText(String.valueOf(sum));
     }
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
