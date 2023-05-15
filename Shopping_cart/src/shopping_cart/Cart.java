@@ -107,13 +107,13 @@ public class Cart extends javax.swing.JFrame {
         total_amount.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
         total_amount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        deleteBTN.setBackground(new java.awt.Color(0, 0, 0));
+        deleteBTN.setBackground(new java.awt.Color(204, 204, 204));
         deleteBTN.setFont(new java.awt.Font("Sitka Display", 0, 14)); // NOI18N
-        deleteBTN.setForeground(new java.awt.Color(255, 255, 255));
         deleteBTN.setText("Delete");
         deleteBTN.setAlignmentX(0.5F);
         deleteBTN.setBorder(null);
         deleteBTN.setBorderPainted(false);
+        deleteBTN.setFocusPainted(false);
         deleteBTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         deleteBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,9 +121,8 @@ public class Cart extends javax.swing.JFrame {
             }
         });
 
-        checkoutBTN.setBackground(new java.awt.Color(0, 0, 0));
+        checkoutBTN.setBackground(new java.awt.Color(204, 204, 204));
         checkoutBTN.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        checkoutBTN.setForeground(new java.awt.Color(255, 255, 255));
         checkoutBTN.setText("Proceed to Checkout");
         checkoutBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

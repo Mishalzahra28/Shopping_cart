@@ -106,10 +106,10 @@ public class checkout extends javax.swing.JFrame {
             .addGap(0, 58, Short.MAX_VALUE)
         );
 
-        checkoutBTN.setBackground(new java.awt.Color(0, 0, 0));
+        checkoutBTN.setBackground(new java.awt.Color(204, 204, 204));
         checkoutBTN.setFont(new java.awt.Font("Sitka Display", 1, 14)); // NOI18N
-        checkoutBTN.setForeground(new java.awt.Color(255, 255, 255));
         checkoutBTN.setText("Checkout");
+        checkoutBTN.setFocusPainted(false);
         checkoutBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkoutBTNActionPerformed(evt);
@@ -160,8 +160,8 @@ public class checkout extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
-                .addComponent(checkoutBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83))
+                .addComponent(checkoutBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

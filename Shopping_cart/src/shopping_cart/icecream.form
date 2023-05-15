@@ -26,7 +26,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="basePanel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="8352" max="32767" attributes="0"/>
+              <EmptySpace pref="8368" max="32767" attributes="0"/>
               <Component id="basePanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -61,34 +61,6 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="price4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="prod4" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="price5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="price6" min="-2" pref="97" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="prod5" min="-2" pref="97" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="prod6" min="-2" pref="97" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="addToCart5" min="-2" pref="107" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="addToCart6" max="32767" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="addToCart7" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -117,10 +89,42 @@
                                   <Component id="switchCategories" min="-2" pref="216" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="8" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="price4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="prod4" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="price5" max="32767" attributes="0"/>
+                                      <Component id="prod5" pref="97" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="prod6" min="-2" pref="97" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                          <Component id="price6" min="-2" pref="97" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="addToCart5" min="-2" pref="107" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="addToCart6" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="addToCart7" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -135,17 +139,15 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="price1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="price2" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="price3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="price1" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="addToCart1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="addToCart4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="addToCart" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="addToCart1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addToCart4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addToCart" alignment="0" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -179,7 +181,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="prod1">
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon =new ImageIcon(&quot;laundary_1.jpg&quot;);                &#xd;&#xa;Image img=icon.getImage();                &#xd;&#xa;Image imageScale=img.getScaledInstance(97,89,Image.SCALE_SMOOTH);                ImageIcon scaledIcon =new ImageIcon(imageScale);       &#xd;&#xa;prod1.setIcon(scaledIcon);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="ImageIcon icon =new ImageIcon(&quot;./images/chocolate.jpg&quot;);                &#xd;&#xa;Image img=icon.getImage();                &#xd;&#xa;Image imageScale=img.getScaledInstance(97,89,Image.SCALE_SMOOTH);                ImageIcon scaledIcon =new ImageIcon(imageScale);       &#xd;&#xa;prod1.setIcon(scaledIcon);"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="prod4">
@@ -204,32 +206,32 @@
         </Component>
         <Component class="javax.swing.JLabel" name="price1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Detergent = 500Rs"/>
+            <Property name="text" type="java.lang.String" value="Chocolate IceCream"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="price2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Brush = 600Rs"/>
+            <Property name="text" type="java.lang.String" value="Mango IceCream"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="price3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Gloves = 700Rs"/>
+            <Property name="text" type="java.lang.String" value="Vanila IceCream"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="price4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Comforter = 800Rs"/>
+            <Property name="text" type="java.lang.String" value="Caramel IceCream"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="price5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Dry Stand = 900Rs"/>
+            <Property name="text" type="java.lang.String" value="Kulfa IceCream"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="price6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Clips = 1000Rs"/>
+            <Property name="text" type="java.lang.String" value="Strawberry IceCream"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JToggleButton" name="switchCategories">
@@ -255,6 +257,11 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Add to Cart"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                <EmptyBorder/>
+              </Border>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addToCartActionPerformed"/>

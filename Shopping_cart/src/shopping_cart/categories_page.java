@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package shopping_cart;
+import java.awt.Color;
 import javax.swing.ImageIcon;
 import java.awt.Image;
+import javax.swing.table.DefaultTableCellRenderer;
 /**
  *
  * @author Mishal
@@ -16,6 +18,10 @@ public class categories_page extends javax.swing.JFrame {
      */
     public categories_page() {
         initComponents();
+        this.getContentPane().setBackground(new Color(255,255,255));
+        DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
+        MyHeaderRender.setBackground(new Color(0,0,0));
+        MyHeaderRender.setForeground(new Color(255,255,255));
     }
 
     /**
@@ -102,19 +108,19 @@ public class categories_page extends javax.swing.JFrame {
 
         //getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));
 
-        laundryBTN.setBackground(new java.awt.Color(0, 0, 0));
+        laundryBTN.setBackground(new java.awt.Color(204, 204, 204));
         laundryBTN.setFont(new java.awt.Font("Sitka Subheading", 1, 12)); // NOI18N
-        laundryBTN.setForeground(new java.awt.Color(255, 255, 255));
         laundryBTN.setText("Laundry");
+        laundryBTN.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        laundryBTN.setFocusPainted(false);
         laundryBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 laundryBTNActionPerformed(evt);
             }
         });
 
-        nashtaBTN.setBackground(new java.awt.Color(0, 0, 0));
+        nashtaBTN.setBackground(new java.awt.Color(204, 204, 204));
         nashtaBTN.setFont(new java.awt.Font("Sitka Subheading", 1, 12)); // NOI18N
-        nashtaBTN.setForeground(new java.awt.Color(255, 255, 255));
         nashtaBTN.setText("Nashta");
         nashtaBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,9 +128,8 @@ public class categories_page extends javax.swing.JFrame {
             }
         });
 
-        kitchenBTN.setBackground(new java.awt.Color(0, 0, 0));
+        kitchenBTN.setBackground(new java.awt.Color(204, 204, 204));
         kitchenBTN.setFont(new java.awt.Font("Sitka Subheading", 1, 12)); // NOI18N
-        kitchenBTN.setForeground(new java.awt.Color(255, 255, 255));
         kitchenBTN.setText("Kitchen Supplies");
         kitchenBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,9 +137,8 @@ public class categories_page extends javax.swing.JFrame {
             }
         });
 
-        icecreamBTN.setBackground(new java.awt.Color(0, 0, 0));
+        icecreamBTN.setBackground(new java.awt.Color(204, 204, 204));
         icecreamBTN.setFont(new java.awt.Font("Sitka Subheading", 1, 12)); // NOI18N
-        icecreamBTN.setForeground(new java.awt.Color(255, 255, 255));
         icecreamBTN.setText("IceCream");
         icecreamBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

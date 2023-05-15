@@ -81,7 +81,7 @@ public class icecream extends javax.swing.JFrame {
         ImageIcon scaledIcon4 =new ImageIcon(imageScale4);       
         prod5.setIcon(scaledIcon4);
 
-        ImageIcon icon =new ImageIcon("laundary_1.jpg");                
+        ImageIcon icon =new ImageIcon("./images/chocolate.jpg");                
         Image img=icon.getImage();                
         Image imageScale=img.getScaledInstance(97,89,Image.SCALE_SMOOTH);                ImageIcon scaledIcon =new ImageIcon(imageScale);       
         prod1.setIcon(scaledIcon);
@@ -110,17 +110,17 @@ public class icecream extends javax.swing.JFrame {
         ImageIcon scaledIcon5 =new ImageIcon(imageScale5);       
         prod6.setIcon(scaledIcon5);
 
-        price1.setText("Detergent = 500Rs");
+        price1.setText("Chocolate IceCream");
 
-        price2.setText("Brush = 600Rs");
+        price2.setText("Mango IceCream");
 
-        price3.setText("Gloves = 700Rs");
+        price3.setText("Vanila IceCream");
 
-        price4.setText("Comforter = 800Rs");
+        price4.setText("Caramel IceCream");
 
-        price5.setText("Dry Stand = 900Rs");
+        price5.setText("Kulfa IceCream");
 
-        price6.setText("Clips = 1000Rs");
+        price6.setText("Strawberry IceCream");
 
         switchCategories.setBackground(new java.awt.Color(0, 0, 0));
         switchCategories.setForeground(new java.awt.Color(255, 255, 255));
@@ -134,6 +134,7 @@ public class icecream extends javax.swing.JFrame {
         addToCart.setBackground(new java.awt.Color(0, 0, 0));
         addToCart.setForeground(new java.awt.Color(255, 255, 255));
         addToCart.setText("Add to Cart");
+        addToCart.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         addToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addToCartActionPerformed(evt);
@@ -192,27 +193,6 @@ public class icecream extends javax.swing.JFrame {
             .addGroup(basePanelLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(basePanelLayout.createSequentialGroup()
-                            .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(price4)
-                                .addComponent(prod4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(27, 27, 27)
-                            .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(basePanelLayout.createSequentialGroup()
-                                    .addComponent(price5)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(price6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(basePanelLayout.createSequentialGroup()
-                                    .addComponent(prod5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(prod6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basePanelLayout.createSequentialGroup()
-                            .addComponent(addToCart5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(addToCart6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGap(18, 18, 18)
-                            .addComponent(addToCart7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(basePanelLayout.createSequentialGroup()
                         .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(basePanelLayout.createSequentialGroup()
@@ -234,8 +214,31 @@ public class icecream extends javax.swing.JFrame {
                             .addGroup(basePanelLayout.createSequentialGroup()
                                 .addGap(76, 76, 76)
                                 .addComponent(switchCategories, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(42, 42, 42))
+                        .addGap(50, 50, 50))
+                    .addGroup(basePanelLayout.createSequentialGroup()
+                        .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(basePanelLayout.createSequentialGroup()
+                                .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(price4)
+                                    .addComponent(prod4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(27, 27, 27)
+                                .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(price5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(prod5, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
+                                .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(basePanelLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(prod6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basePanelLayout.createSequentialGroup()
+                                        .addGap(34, 34, 34)
+                                        .addComponent(price6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, basePanelLayout.createSequentialGroup()
+                                .addComponent(addToCart5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(addToCart6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(addToCart7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(42, 42, 42))))
         );
         basePanelLayout.setVerticalGroup(
             basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,15 +250,14 @@ public class icecream extends javax.swing.JFrame {
                     .addComponent(prod2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(price1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(price2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(price3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(price3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(price1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(addToCart1)
-                        .addComponent(addToCart4))
-                    .addComponent(addToCart))
+                .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addToCart1)
+                    .addComponent(addToCart4)
+                    .addComponent(addToCart, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(basePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(prod4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -401,7 +403,7 @@ public class icecream extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(basePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8352, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8368, Short.MAX_VALUE)
                 .addComponent(basePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
