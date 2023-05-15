@@ -19,64 +19,74 @@ import javax.swing.table.TableRowSorter;
 public class Cart extends javax.swing.JFrame {
  DefaultTableModel model;
  
-   
-    /**
-     * Creates new form Cart
-     */
-    public Cart() {
+    public Cart(String product_id, String product_name, String product_quantity, String product_price) {
         initComponents();
           this.setLocationRelativeTo(null);
-//           model = new DefaultTableModel() cart_items.getModel() ;
-        model = new DefaultTableModel() ;
-         cart_items =new JTable(model);
-       model.addColumn("Column 1");
-        model.addColumn("Column 2");
-        model.addColumn("Column 1");
-        model.addColumn("Column 2");
+        model = (DefaultTableModel) cart_items.getModel();
+         model.insertRow(model.getRowCount(), new Object[]{product_id,product_name, product_quantity, product_price});
         this.getContentPane().setBackground(new Color(255, 255, 255));
         DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
         MyHeaderRender.setBackground(new Color(0, 0, 0));
         MyHeaderRender.setForeground(new Color(255, 255, 255));
-//        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
-        setTotal();
+//        setTotal();
     }
-    
-    public Cart(String [][]array1){
-          model = new DefaultTableModel() ;
-         cart_items =new JTable(model);
-       model.addColumn("ID");
-        model.addColumn("Product");
-        model.addColumn("Quantity");
-        model.addColumn("Price");
-//        f.setSize(600, 400); cart_items.getModel();
-////         model = new DefaultTableModel();
-////            cart_items= new JTable(model) ;
-//        model.addColumn("Column 1");
+    /**
+     * Creates new form Cart
+     */
+//    public Cart() {
+//        initComponents();
+//          this.setLocationRelativeTo(null);
+////           model = new DefaultTableModel() cart_items.getModel() ;
+//        model = new DefaultTableModel() ;
+//         cart_items =new JTable(model);
+//       model.addColumn("Column 1");
 //        model.addColumn("Column 2");
 //        model.addColumn("Column 1");
 //        model.addColumn("Column 2");
-// DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
+//        this.getContentPane().setBackground(new Color(255, 255, 255));
+//        DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
 //        MyHeaderRender.setBackground(new Color(0, 0, 0));
 //        MyHeaderRender.setForeground(new Color(255, 255, 255));
-//        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
-//        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
-//               
-         for (int i = 0; i < 6; i++) {
-             for (int j = 0; j < 4; j++) {
-                 System.out.println(array1[i][j]);
-//                 model.addRow(array1[i]);
- model.insertRow(model.getRowCount(), new Object[]{array1[i][0], array1[i][1], array1[i][2],array1[i][3]});
-  
-//            cart_items.getModel().
-//                    model.insertRow(cart_items.getRowCount(),array1[i]);
-             }
-        }
-     }
+////        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
+//        setTotal();
+//    }
+//    
+//    public Cart(String [][]array1){
+//          model = new DefaultTableModel() ;
+//         cart_items =new JTable(model);
+//       model.addColumn("ID");
+//        model.addColumn("Product");
+//        model.addColumn("Quantity");
+//        model.addColumn("Price");
+////        f.setSize(600, 400); cart_items.getModel();
+//////         model = new DefaultTableModel();
+//////            cart_items= new JTable(model) ;
+////        model.addColumn("Column 1");
+////        model.addColumn("Column 2");
+////        model.addColumn("Column 1");
+////        model.addColumn("Column 2");
+//// DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
+////        MyHeaderRender.setBackground(new Color(0, 0, 0));
+////        MyHeaderRender.setForeground(new Color(255, 255, 255));
+////        cart_items.getTableHeader().getColumnModel().getColumn(0).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(1).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(2).setHeaderRenderer(MyHeaderRender);
+////        cart_items.getTableHeader().getColumnModel().getColumn(3).setHeaderRenderer(MyHeaderRender);
+////               
+//         for (int i = 0; i < 6; i++) {
+//             for (int j = 0; j < 4; j++) {
+//                 System.out.println(array1[i][j]);
+////                 model.addRow(array1[i]);
+// model.insertRow(model.getRowCount(), new Object[]{array1[i][0], array1[i][1], array1[i][2],array1[i][3]});
+//  
+////            cart_items.getModel().
+////                    model.insertRow(cart_items.getRowCount(),array1[i]);
+//             }
+//        }
+//     }
     
     public void setTotal(){
         int sum=0;
@@ -299,7 +309,7 @@ public class Cart extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cart().setVisible(true);
+                new Cart("","", "", "").setVisible(true);
             }
         });
     }

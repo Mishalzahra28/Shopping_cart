@@ -17,7 +17,9 @@ public class categories_page extends javax.swing.JFrame {
      * Creates new form categories_page
      */
     public categories_page() {
-        initComponents();
+        initComponents();        
+        this.setLocationRelativeTo(null);
+
         this.getContentPane().setBackground(new Color(255,255,255));
         DefaultTableCellRenderer MyHeaderRender = new DefaultTableCellRenderer();
         MyHeaderRender.setBackground(new Color(0,0,0));
@@ -56,7 +58,7 @@ public class categories_page extends javax.swing.JFrame {
         test.setFont(new java.awt.Font("Sitka Heading", 1, 24)); // NOI18N
         test.setForeground(new java.awt.Color(255, 255, 255));
         test.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        test.setText("TEST");
+        test.setText("Shopping Mart");
 
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
         header.setLayout(headerLayout);
@@ -228,7 +230,7 @@ public class categories_page extends javax.swing.JFrame {
     private void nashtaBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nashtaBTNActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        nashta n = new nashta();
+        icecream n = new icecream();
         n.setVisible(true);
     }//GEN-LAST:event_nashtaBTNActionPerformed
 
@@ -242,7 +244,7 @@ public class categories_page extends javax.swing.JFrame {
     private void icecreamBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_icecreamBTNActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        icecream i = new icecream();
+        nashta i = new nashta();
         i.setVisible(true);
     }//GEN-LAST:event_icecreamBTNActionPerformed
 

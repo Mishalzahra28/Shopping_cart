@@ -59,15 +59,15 @@ public class Loginform extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0,0,0,205));
 
-        loginlbl.setFont(new java.awt.Font("Harrington", 1, 24)); // NOI18N
+        loginlbl.setFont(new java.awt.Font("Sitka Heading", 1, 24)); // NOI18N
         loginlbl.setForeground(new java.awt.Color(255, 255, 255));
         loginlbl.setText("Login");
 
-        usernamelbl.setFont(new java.awt.Font("Harrington", 1, 18)); // NOI18N
+        usernamelbl.setFont(new java.awt.Font("Sitka Display", 0, 14)); // NOI18N
         usernamelbl.setForeground(new java.awt.Color(255, 255, 255));
         usernamelbl.setText("USERNAME");
 
-        passwordchk.setFont(new java.awt.Font("Harrington", 1, 14)); // NOI18N
+        passwordchk.setFont(new java.awt.Font("Sitka Display", 0, 14)); // NOI18N
         passwordchk.setForeground(new java.awt.Color(255, 255, 255));
         passwordchk.setText("Show Password");
         passwordchk.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +77,7 @@ public class Loginform extends javax.swing.JFrame {
         });
 
         loginbtn.setBackground(new java.awt.Color(165, 99, 0));
-        loginbtn.setFont(new java.awt.Font("Harrington", 1, 18)); // NOI18N
+        loginbtn.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
         loginbtn.setForeground(new java.awt.Color(255, 255, 255));
         loginbtn.setText("LOGIN");
         loginbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -89,12 +89,12 @@ public class Loginform extends javax.swing.JFrame {
         Usernametxt.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Usernametxt.setForeground(new java.awt.Color(255, 255, 255));
 
-        passwordlbl.setFont(new java.awt.Font("Harrington", 1, 18)); // NOI18N
+        passwordlbl.setFont(new java.awt.Font("Sitka Display", 0, 14)); // NOI18N
         passwordlbl.setForeground(new java.awt.Color(255, 255, 255));
         passwordlbl.setText("PASSWORD");
 
         Resetbtn.setBackground(new java.awt.Color(165, 99, 0));
-        Resetbtn.setFont(new java.awt.Font("Harrington", 1, 18)); // NOI18N
+        Resetbtn.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
         Resetbtn.setForeground(new java.awt.Color(255, 255, 255));
         Resetbtn.setText("RESET");
         Resetbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +154,7 @@ public class Loginform extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Resetbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 350, 340));
